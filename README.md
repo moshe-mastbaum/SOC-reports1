@@ -1,76 +1,84 @@
-# SOC Report -- README
+# SOC Weekly Report -- README
 
-This document provides an overview of the structure, purpose, and usage
-of a Security Operations Center (SOC) report.
+**Version:** 1.3\
+**Prepared by:** Security Operations Center (SOC)\
+**Classification:** Internal Use Only
 
-## Purpose of the SOC Report
+## 🧭 Purpose
 
-A SOC report summarizes security-related events, incidents, alerts,
-investigations, and responses within an organization for a defined
-period.\
-It helps stakeholders understand the security posture, identify trends,
-and make informed decisions.
+This README provides context and structure for the SOC weekly report
+included in this repository.
 
-## Report Contents
+## 📂 Structure
 
-### 1. **Executive Summary**
+    /incidents/          Detailed incident timelines
+    /alerts/             Raw SIEM alert exports
+    /threat-intel/       IOC feeds and intel notes
+    /system-health/      Monitoring & log-source health checks
+    /graphs/             Visual charts (PNG/PDF)
+    /summary.md          Executive summary
 
--   High‑level overview of key incidents and findings.
--   Trends observed during the reporting period.
--   Overall risk assessment.
+## 📄 Executive Summary
 
-### 2. **Incident Overview**
+High-level overview of major incidents, trends, and the organization's
+security posture.
 
--   List of all detected incidents.
--   Severity levels (Low/Medium/High/Critical).
--   Dates, impacted assets, and resolution status.
+## 🔥 Incident Handling Summary
 
-### 3. **Alerts Summary**
+-   Incident ID\
+-   Description\
+-   Assets affected\
+-   Severity (Critical/High/Medium/Low)\
+-   Actions taken: Triage → Containment → Eradication → Recovery\
+-   Escalations (if any)
 
--   Volume of alerts by category (e.g., malware, network anomalies,
-    authentication failures).
--   False positive analysis.
--   Top recurring alert sources.
+**Example Event:**\
+- *INC-2025-1043*: Unusual failed login attempts from a service account.
+Root cause: misconfigured script. Classified as False Positive.
 
-### 4. **Investigations**
+## 🛡 Security Events Overview
 
--   Cases opened by the SOC team.
--   Actions taken (triage, containment, eradication).
--   Evidence collected and findings.
+Includes: - Total alerts\
+- Volume by severity\
+- Top alert sources\
+- Spikes or anomalies
 
-### 5. **Threat Intelligence**
+## 🧠 Threat Intelligence Highlights
 
--   Indicators of compromise (IOCs) relevant to the period.
--   Threat actor activity if applicable.
--   Correlation with internal events.
+-   Relevant IOCs\
+-   Blocked domains/IPs\
+-   Campaigns impacting the sector\
+-   New critical CVEs
 
-### 6. **System Health & Monitoring**
+## 🩺 SIEM & Monitoring Health
 
--   Status of SIEM, sensors, agents, and log sources.
--   Missing logs or failed integrations.
--   Coverage gaps.
+-   Log source connectivity\
+-   Missing agents\
+-   Delayed ingestion\
+-   SIEM query performance
 
-### 7. **Recommendations**
+## 🔍 Forensic Investigation Notes
 
--   Security hardening steps.
--   Mitigation strategies for identified risks.
--   Future monitoring improvements.
+-   Evidence summary\
+-   IOC list\
+-   Process execution timeline\
+-   Persistence mechanisms
 
-## File Structure
+## 📏 Compliance & Policy Deviations
 
-    /soc-report
-    ├── incidents/
-    ├── alerts/
-    ├── investigations/
-    ├── threat-intelligence/
-    └── summary.md
+-   Excessive permissions\
+-   VPN anomalies\
+-   Non‑compliant systems\
+-   Missing security patches
 
-## Usage
+## 🚀 Recommendations
 
--   Review the executive summary for a quick overview.
--   Drill down into incident and alert folders for detailed analysis.
--   Use recommendations to improve security controls.
+-   Hardening actions\
+-   New SIEM rules\
+-   Blocking traffic\
+-   User awareness activities
 
-## Contact
+## 📧 Contact
 
-For questions or clarifications, contact the SOC team.
+**SOC Team:** security-operations@company.local\
+24/7 response for critical issues.
